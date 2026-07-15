@@ -330,3 +330,30 @@ html[data-theme="dark"] .amu-badge img,html[data-theme="dark"] .footer-amu img{f
   .amu-badge:hover{transform:translateX(-50%) translateY(-2px)}
   .amu-badge img{width:37px;height:37px}
 }
+
+/* Consistent button feedback and balanced AMU logo sizing */
+.amu-badge img{width:34px;height:34px}
+.footer-amu img{width:44px;height:44px}
+
+:is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):hover,
+:is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):focus-visible{
+  background:var(--yellow);
+  border-color:var(--yellow);
+  color:#102f28;
+  transform:translateY(-3px);
+  box-shadow:0 9px 22px rgba(244,200,93,.25);
+  outline:none;
+}
+:is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):hover span,
+:is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):focus-visible span{color:#102f28}
+.menu-button:hover,.menu-button:focus-visible{background:var(--yellow);border-radius:50%;outline:none}
+.menu-button:hover span,.menu-button:focus-visible span{background:#102f28}
+
+@media(max-width:1180px){.amu-badge img{width:34px;height:34px}}
+@media(max-width:720px){.amu-badge img{width:32px;height:32px}.footer-amu img{width:40px;height:40px}}
+html[data-theme="dark"] :is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):hover,
+html[data-theme="dark"] :is(.button,.nav-pill,.theme-toggle,.profile-links a,.publication-card>a,.event-links a,.back-to-top):focus-visible{
+  background:var(--yellow);
+  border-color:var(--yellow);
+  color:#102f28;
+}
