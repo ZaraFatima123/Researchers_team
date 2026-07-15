@@ -5,7 +5,6 @@ const themeIcon = document.querySelector('.theme-icon');
 const themeLabel = document.querySelector('.theme-label');
 
 const savedTheme = localStorage.getItem('research-theme');
-const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
 
 function setTheme(theme) {
   const isDark = theme === 'dark';
@@ -17,7 +16,7 @@ function setTheme(theme) {
   document.querySelector('meta[name="theme-color"]').content = isDark ? '#0c241f' : '#163b32';
 }
 
-setTheme(savedTheme || (systemPrefersDark ? 'dark' : 'light'));
+setTheme(savedTheme || 'light');
 
 themeToggle.addEventListener('click', () => {
   const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
