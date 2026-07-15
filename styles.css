@@ -217,9 +217,21 @@ html[data-theme="dark"] .person-card.featured .person-photo{background:linear-gr
 }
 .memory-card img{position:absolute;inset:0}
 .memory-tall img{
-  object-fit:cover;
-  object-position:center 38%;
+  object-fit:contain;
+  object-position:center;
+  z-index:1;
 }
+.memory-tall{background:#102f28;isolation:isolate}
+.memory-tall:before{
+  content:"";
+  position:absolute;
+  inset:-22px;
+  background:url("memory1.jpeg") center 38%/cover no-repeat;
+  filter:blur(18px) brightness(.58);
+  transform:scale(1.06);
+  z-index:0;
+}
+.memory-tall figcaption{z-index:2}
 .memory-wide img{
   object-fit:cover;
   object-position:center 45%;
