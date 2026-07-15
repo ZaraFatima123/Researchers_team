@@ -540,3 +540,14 @@ html[data-theme="dark"] .student-paper-grid .paper-link-row a:focus-visible{
   border-color:var(--yellow);
   color:#102f28;
 }
+
+/* Keep the hero AMU seal inside the text column on wide screens so it
+   never covers Saurav's collaborator portrait in the constellation. */
+@media(min-width:1001px){
+  .hero-copy .hero-amu-seal{
+    left:auto;
+    right:0;
+    top:-34px;
+    width:150px;
+  }
+}
