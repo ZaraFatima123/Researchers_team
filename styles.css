@@ -510,3 +510,33 @@ html[data-theme="dark"] .seal-ring{
 html[data-theme="dark"] .orbit{border-color:rgba(255,255,255,.58)}
 html[data-theme="dark"] .avatar-photo,
 html[data-theme="dark"] .avatar-placeholder{border-color:rgba(255,255,255,.9)}
+
+/* Keep every student publication readable in dark mode. */
+html[data-theme="dark"] .student-paper-grid .student-paper{
+  background:#173f36;
+  border-color:rgba(255,255,255,.22);
+  color:#f7fbf9;
+}
+html[data-theme="dark"] .student-paper-grid .featured-paper{background:#8b483f}
+html[data-theme="dark"] .student-paper-grid .student-paper:nth-child(2){background:#244f43}
+html[data-theme="dark"] .student-paper-grid .student-paper:nth-child(3){background:#6f5a24}
+html[data-theme="dark"] .student-paper-grid .student-paper h3,
+html[data-theme="dark"] .student-paper-grid .paper-top,
+html[data-theme="dark"] .student-paper-grid .paper-top b,
+html[data-theme="dark"] .student-paper-grid .paper-authors strong{color:#fff}
+html[data-theme="dark"] .student-paper-grid .student-paper>p,
+html[data-theme="dark"] .student-paper-grid .paper-authors span{color:#c8d9d3}
+html[data-theme="dark"] .student-paper-grid .paper-authors{border-color:rgba(255,255,255,.2)}
+html[data-theme="dark"] .student-paper-grid .student-paper>a,
+html[data-theme="dark"] .student-paper-grid .paper-link-row a{
+  color:#fff;
+  border-color:rgba(255,255,255,.35);
+}
+html[data-theme="dark"] .student-paper-grid .student-paper>a:hover,
+html[data-theme="dark"] .student-paper-grid .student-paper>a:focus-visible,
+html[data-theme="dark"] .student-paper-grid .paper-link-row a:hover,
+html[data-theme="dark"] .student-paper-grid .paper-link-row a:focus-visible{
+  background:var(--yellow);
+  border-color:var(--yellow);
+  color:#102f28;
+}
