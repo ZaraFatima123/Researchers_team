@@ -14,7 +14,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css?v=20260715-5">
 </head>
 <body id="top">
   <a class="skip-link" href="#main-content">Skip to main content</a>
@@ -51,14 +51,18 @@
       <div class="hero-copy reveal">
         <div class="eyebrow"><span></span> AMU · Computer Science</div>
         <h1>Bright minds.<br><em>Better</em> together. ✨</h1>
-        <p class="hero-lede">A mentor and two students learning, building and sharing ideas at AMU’s Department of Computer Science.</p>
+        <p class="hero-lede">A mentor and three students learning, building and sharing ideas at AMU’s Department of Computer Science.</p>
         <div class="hero-actions">
           <a class="button primary" href="#people">Meet the collective <span>↓</span></a>
           <a class="text-link" href="#journey">Our ICECI story <span>↗</span></a>
         </div>
+        <a class="hero-amu-seal" href="https://www.amu.ac.in/" target="_blank" rel="noopener" aria-label="Visit Aligarh Muslim University official website">
+          <span class="seal-ring"><img src="AMU_Logo.png" width="320" height="320" alt="Aligarh Muslim University emblem"></span>
+          <span class="seal-name">Aligarh Muslim University<small>Institutional home · Est. 1920</small></span>
+        </a>
       </div>
 
-      <div class="hero-visual reveal" data-delay="1" aria-label="Three connected researcher portraits">
+      <div class="hero-visual reveal" data-delay="1" aria-label="Four connected collaborators">
         <div class="orbit orbit-one"></div>
         <div class="orbit orbit-two"></div>
         <div class="portrait-card portrait-main">
@@ -71,9 +75,14 @@
         <a class="mini-person mini-two" href="#umar" aria-label="View Syed Umar Ali">
           <img class="avatar-photo mint" src="Umar.jpg" width="800" height="800" alt="Syed Umar Ali"><b>Umar</b>
         </a>
+        <a class="mini-person mini-three" href="#zara" aria-label="View Zara Fatima Siddiqui">
+          <span class="avatar-placeholder" aria-hidden="true">
+            <svg viewBox="0 0 64 64"><circle cx="32" cy="23" r="12"></circle><path d="M12 56c2-14 10-21 20-21s18 7 20 21"></path></svg>
+          </span><b>Zara</b>
+        </a>
         <div class="idea-note"><span>😎</span> Smart ideas.<br>Good company.</div>
         <svg class="connection-lines" viewBox="0 0 600 560" aria-hidden="true">
-          <path d="M110 170 C210 50 350 55 430 145"/><path d="M158 410 C255 505 420 455 475 340"/><path d="M112 185 C95 300 110 360 165 410"/>
+          <path d="M110 170 C210 50 350 55 430 145"/><path d="M158 410 C255 505 420 455 475 340"/><path d="M112 185 C95 300 110 360 165 410"/><path d="M285 350 C235 410 155 455 78 450"/>
         </svg>
       </div>
 
@@ -97,8 +106,8 @@
           <span class="section-number">01</span>
           <div class="eyebrow"><span></span> The people</div>
         </div>
-        <h2>Three perspectives.<br><em>One shared direction.</em></h2>
-        <p>Three personalities, different strengths and one shared academic journey.</p>
+        <h2>Four perspectives.<br><em>One shared direction.</em></h2>
+        <p>Four personalities, different strengths and one shared academic journey.</p>
       </div>
 
       <article class="person-card featured reveal" id="faraz">
@@ -107,7 +116,7 @@
           <span class="photo-tag">Mentor 🧭</span>
         </div>
         <div class="person-content">
-          <div class="card-top"><span>01 / 03</span><span class="status-dot">Guiding the collective</span></div>
+          <div class="card-top"><span>01 / 04</span><span class="status-dot">Guiding the collective</span></div>
           <h3>Dr. Faraz<br><em>Masood</em></h3>
           <p class="role">· Department of Computer Science, AMU</p>
           <p class="bio">An educator working across decentralized systems and artificial intelligence. His guidance extends beyond projects to mentoring, counselling and helping students approach difficult problems with confidence.</p>
@@ -126,7 +135,7 @@
             <img src="Saurav.jpg" width="800" height="800" alt="Saurav Singh" loading="lazy"><span class="spark"></span><span class="photo-tag">Explorer 🚀</span>
           </div>
           <div class="person-content">
-            <div class="card-top"><span>02 / 03</span><span class="status-dot">Team collaborator</span></div>
+            <div class="card-top"><span>02 / 04</span><span class="status-dot">Team collaborator</span></div>
             <h3>Saurav<br><em>Singh</em></h3>
             <p class="role">Student Researcher · AMU  · Technical Team · CSS DSA Lead</p>
             <p class="bio">Brings energy, curiosity and a builder’s mindset to shared computing projects and new technical challenges.</p>
@@ -139,11 +148,27 @@
             <img src="Umar.jpg" width="800" height="800" alt="Syed Umar Ali" loading="lazy"><span class="spark"></span><span class="photo-tag">Thinker 💡</span>
           </div>
           <div class="person-content">
-            <div class="card-top"><span>03 / 03</span><span class="status-dot">Team collaborator</span></div>
+            <div class="card-top"><span>03 / 04</span><span class="status-dot">Team collaborator</span></div>
             <h3>Syed Umar<br><em>Ali</em></h3>
             <p class="role">Student Researcher · AMU · Tarana Team · CSS Secretary</p>
             <p class="bio">Brings careful thinking, technical interest and a calm perspective to the team’s shared academic challenges.</p>
             <div class="profile-links"><a href="https://www.linkedin.com/in/syed-umar-ali-1b2527291/" target="_blank" rel="noopener">View LinkedIn <span>↗</span></a></div>
+          </div>
+        </article>
+
+        <article class="person-card student zara-card reveal" id="zara" data-delay="2">
+          <div class="student-visual zara-bg">
+            <div class="profile-placeholder" role="img" aria-label="Profile image placeholder for Zara Fatima Siddiqui">
+              <svg viewBox="0 0 96 96"><circle cx="48" cy="34" r="18"></circle><path d="M18 84c3-21 15-32 30-32s27 11 30 32"></path></svg>
+            </div>
+            <span class="spark">✨</span><span class="photo-tag">· Researcher</span>
+          </div>
+          <div class="person-content">
+            <div class="card-top"><span>04 / 04</span><span class="status-dot">Team collaborator</span></div>
+            <h3>Zara Fatima<br><em>Siddiqui</em></h3>
+            <p class="role">Student Researcher · AMU · Academic Writing · Conference Documentation</p>
+            <p class="bio">Contributes to human-centred EV charging work, academic writing and the documentation that turns shared effort into a lasting record.</p>
+            <div class="profile-links"><a href="#student-work">View student work <span>↓</span></a></div>
           </div>
         </article>
       </div>
@@ -183,9 +208,14 @@
       <div class="section-heading reveal">
         <div><span class="section-number">03</span><div class="eyebrow"><span></span> Selected work</div></div>
         <h2>Selected work.<br><em>Clearly documented.</em></h2>
-        <p>Four publications from Dr. Faraz Masood’s academic profile, with direct links for readers who want the details.</p>
+        <p>Five publications from Dr. Faraz Masood’s academic profile, with direct links for readers who want the details.</p>
       </div>
       <div class="publication-list">
+        <article class="publication-card reveal">
+          <div class="publication-meta"><span>2025</span><span>IET Software · Wiley</span></div>
+          <div class="publication-body"><span class="publication-type">Blockchain · Digital Identity</span><h3>BLOCKVISA: A blockchain-based system for efficient and secure visa, passport and immigration verification</h3><p>A network-agnostic blockchain application designed to improve the security, efficiency and interoperability of global identity-verification workflows.</p><span class="authors">Faraz Masood · Ali Haider Shamsan · Arman Rasool Faridi</span></div>
+          <a href="https://ietresearch.onlinelibrary.wiley.com/doi/full/10.1049/sfw2/5567569" target="_blank" rel="noopener" aria-label="Open the BLOCKVISA publication on Wiley">↗</a>
+        </article>
         <article class="publication-card reveal">
           <div class="publication-meta"><span>2024</span><span>Springer</span></div>
           <div class="publication-body"><span class="publication-type">Blockchain · Healthcare</span><h3>Developing a novel blockchain-based vaccine tracking and certificate system</h3><p>An end-to-end approach to vaccine traceability and certificate verification using blockchain infrastructure.</p><span class="authors">Faraz Masood · Arman Rasool Faridi</span></div>
@@ -242,8 +272,8 @@
           <div class="paper-top"><span>Conference presentation</span><b>IC2E3 · 2026</b></div>
           <div class="paper-icon">🎤</div>
           <h3>Paper presented at NIT Uttarakhand</h3>
-          <p>Saurav Singh and Syed Umar Ali presented their work at the Fourth International Conference on Computer, Electronics, Electrical Engineering and Their Applications.</p>
-          <div class="paper-authors"><span>Presenters</span><strong>Saurav Singh · Syed Umar Ali</strong></div>
+          <p>Zara Fatima Siddiqui, Saurav Singh and Syed Umar Ali presented their work at the Fourth International Conference on Computer, Electronics, Electrical Engineering and Their Applications.</p>
+          <div class="paper-authors"><span>Presenters </span><strong>Zara Fatima Siddiqui </span><strong>· Saurav Singh · Syed Umar Ali</strong></div>
           <a href="https://nituk.ac.in/ic2e32026/about" target="_blank" rel="noopener">Visit IC2E3-2026 <span>↗</span></a>
         </article>
 
@@ -402,7 +432,7 @@
     <p class="copyright">Built for curiosity · <span id="year"></span></p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js?v=20260715-5"></script>
   <script type="application/ld+json">
   {"@context":"https://schema.org","@type":"Person","name":"Dr. Faraz Masood","jobTitle":"Guest Faculty","affiliation":{"@type":"CollegeOrUniversity","name":"Aligarh Muslim University"},"url":"https://www.amu.ac.in/faculty/computer-science/faraz-masood","sameAs":["https://scholar.google.com/citations?hl=en&user=0YplbykAAAAJ","https://www.linkedin.com/in/ffarazs/"],"knowsAbout":["Blockchain","Distributed Ledger Technology","Artificial Intelligence","Large Language Models","Retrieval-Augmented Generation"]}
   </script>

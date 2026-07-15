@@ -370,6 +370,25 @@ html[data-theme="dark"] :is(.button,.nav-pill,.theme-toggle,.profile-links a,.pu
   color:#102f28;
 }
 
+/* Fourth collaborator and dark-mode constellation visibility */
+.mini-three{left:1%;bottom:34px}
+.avatar-placeholder{width:108px;height:108px;border-radius:50%;display:grid;place-items:center;background:var(--yellow);border:8px solid var(--paper);box-shadow:var(--shadow)}
+.avatar-placeholder svg{width:54px;height:54px;fill:none;stroke:#102f28;stroke-width:4;stroke-linecap:round}
+.zara-card{grid-column:1/-1}
+.zara-bg{background:var(--yellow)}
+.profile-placeholder{width:150px;height:150px;border-radius:50%;display:grid;place-items:center;background:rgba(255,255,255,.54);border:2px dashed rgba(16,47,40,.28);z-index:1}
+.profile-placeholder svg{width:88px;height:88px;fill:none;stroke:#163b32;stroke-width:4;stroke-linecap:round}
+html[data-theme="dark"] .connection-lines path{stroke:rgba(255,255,255,.72)}
+html[data-theme="dark"] .orbit{border-color:rgba(255,255,255,.24)}
+html[data-theme="dark"] .avatar-placeholder{border-color:#163b32}
+
+@media(max-width:720px){
+  .mini-three{left:2%;bottom:22px}
+  .avatar-placeholder{width:75px;height:75px;border-width:5px}
+  .avatar-placeholder svg{width:38px;height:38px}
+  .zara-card{grid-column:auto}
+}
+
 /* Student collective */
 .student-work{padding-top:140px;padding-bottom:145px;background:var(--paper)}
 .student-heading{margin-bottom:65px}
@@ -407,3 +426,87 @@ html[data-theme="dark"] .student-work{background:#102f28}html[data-theme="dark"]
   .department-photo{min-height:0;aspect-ratio:16/10}
   .student-home-copy{padding:32px 24px 38px}
 }
+
+/* AMU seal in the open hero space */
+.hero-amu-seal{
+  position:absolute;
+  right:clamp(38px,6vw,105px);
+  top:185px;
+  z-index:7;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:12px;
+  width:170px;
+  text-align:center;
+  opacity:1;
+  visibility:visible;
+  transition:transform .3s ease;
+}
+.hero-amu-seal:hover{transform:translateY(-5px) rotate(1deg)}
+.seal-ring{width:132px;height:132px;border-radius:50%;display:grid;place-items:center;background:rgba(255,250,242,.78);border:1px solid var(--line);box-shadow:0 18px 45px rgba(22,59,50,.14);backdrop-filter:blur(10px)}
+.seal-ring img{width:104px;height:104px;object-fit:contain;display:block}
+.seal-name{font:800 10px/1.35 Manrope;text-transform:uppercase;letter-spacing:.09em}.seal-name small{display:block;margin-top:5px;color:#728880;font:600 8px/1.3 Manrope;text-transform:none;letter-spacing:.03em}
+html[data-theme="dark"] .seal-ring{background:rgba(18,50,43,.82);border-color:rgba(255,255,255,.16)}html[data-theme="dark"] .seal-ring img{filter:brightness(1.65) saturate(.75)}html[data-theme="dark"] .seal-name small{color:#9bb1aa}
+
+@media(max-width:1250px){.hero-amu-seal{right:25px;top:205px;width:140px}.seal-ring{width:108px;height:108px}.seal-ring img{width:84px;height:84px}}
+@media(max-width:1000px){.hero-amu-seal{position:relative;right:auto;top:auto;width:max-content;max-width:200px;grid-column:1;margin:0 0 35px;flex-direction:row;text-align:left}.seal-ring{width:82px;height:82px;flex:0 0 auto}.seal-ring img{width:64px;height:64px}.seal-name{font-size:9px}}
+@media(max-width:560px){.hero-amu-seal{margin-top:10px}.seal-ring{width:70px;height:70px}.seal-ring img{width:54px;height:54px}}
+
+/* Keep the AMU seal beside the hero heading at desktop and tablet widths. */
+.hero-copy{position:relative}
+.hero-copy .hero-amu-seal{
+  right:auto;
+  left:calc(100% + clamp(38px,5vw,76px));
+  top:105px;
+}
+
+@media(max-width:1000px){
+  .hero-copy{
+    display:grid;
+    grid-template-columns:minmax(0,1fr) 190px;
+    column-gap:42px;
+    align-items:center;
+  }
+  .hero-copy>.eyebrow,.hero-copy>h1,.hero-copy>.hero-lede,.hero-copy>.hero-actions{grid-column:1}
+  .hero-copy .hero-amu-seal{
+    position:relative;
+    left:auto;
+    right:auto;
+    top:auto;
+    grid-column:2;
+    grid-row:1/5;
+    align-self:center;
+    justify-self:center;
+    margin:0;
+    flex-direction:column;
+    text-align:center;
+    width:170px;
+  }
+  .hero-copy .seal-ring{width:120px;height:120px}
+  .hero-copy .seal-ring img{width:94px;height:94px}
+}
+
+@media(max-width:780px){
+  .hero-copy{display:block}
+  .hero-copy .hero-amu-seal{
+    display:flex;
+    position:relative;
+    width:max-content;
+    max-width:240px;
+    margin:30px 0 12px;
+    flex-direction:row;
+    text-align:left;
+  }
+  .hero-copy .seal-ring{width:76px;height:76px}
+  .hero-copy .seal-ring img{width:58px;height:58px}
+}
+
+/* High-contrast circular outlines in dark mode */
+html[data-theme="dark"] .seal-ring{
+  border:2px solid rgba(255,255,255,.82);
+  box-shadow:0 0 0 1px rgba(255,255,255,.12),0 18px 45px rgba(0,0,0,.28);
+}
+html[data-theme="dark"] .orbit{border-color:rgba(255,255,255,.58)}
+html[data-theme="dark"] .avatar-photo,
+html[data-theme="dark"] .avatar-placeholder{border-color:rgba(255,255,255,.9)}

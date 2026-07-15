@@ -4,8 +4,6 @@ const themeToggle = document.querySelector('.theme-toggle');
 const themeIcon = document.querySelector('.theme-icon');
 const themeLabel = document.querySelector('.theme-label');
 
-const savedTheme = localStorage.getItem('research-theme');
-
 function setTheme(theme) {
   const isDark = theme === 'dark';
   document.documentElement.dataset.theme = theme;
@@ -16,12 +14,13 @@ function setTheme(theme) {
   document.querySelector('meta[name="theme-color"]').content = isDark ? '#0c241f' : '#163b32';
 }
 
-setTheme(savedTheme || 'light');
+// Always begin in light mode on every page load.
+localStorage.removeItem('research-theme');
+setTheme('light');
 
 themeToggle.addEventListener('click', () => {
   const nextTheme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
   setTheme(nextTheme);
-  localStorage.setItem('research-theme', nextTheme);
 });
 
 menuButton.addEventListener('click', () => {
